@@ -1,6 +1,6 @@
 # Agenda - Workshop 2
 
-Spring Boot Agenda - Used for Workshop 2
+Spring Boot Agenda - Used for Workshop 3
 <br>
 
 # Tech stack
