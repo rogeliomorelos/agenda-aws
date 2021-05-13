@@ -40,11 +40,9 @@ jobs:
       - name: Cache maven dependencies
         uses: actions/cache@v2
         with:
-          # mvn cache files are stored in `~/.m2/repository` on Linux/macOS
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
       - name: Execute mvn clean package
         run: mvn clean package -DskipTests
