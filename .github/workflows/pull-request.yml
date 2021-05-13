@@ -39,7 +39,9 @@ jobs:
       with:
         # mvn cache files are stored in `~/.m2/repository` on Linux/macOS
         path: ~/.m2/repository
-        key: ${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
 
     - name: Execute mvn clean test
       run: mvn clean test -Dspring.datasource.password=${{ secrets.DB_PASSWORD }}
