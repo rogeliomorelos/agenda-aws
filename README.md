@@ -1,6 +1,7 @@
-# Agenda - Workshop 2
+# Agenda - Workshop 3
 
 Spring Boot Agenda - Used for Workshop 3
+This workshop consists of the CI/CD pipeline to deploy a Java API with Docker and GitHub Actions to AWS ECR and ECS
 <br>
 
 # Tech stack
